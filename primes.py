@@ -5,12 +5,18 @@ Your module documentation here
 
 class PrimeClass(object):
     """
-    Your class documentation here
+     Clase que contiene la implementacion del metodo is_prime
     """
 
     def is_prime(self, num_int):
         """
-        Your method documentation here
+        Metodo que determina si un numero es primo
         """
         # your primes code here
-        return "not implement yet"  # Remove this dummy line
+        if num_int == 1:
+            return False
+        else:
+            for a in range(2,num_int):
+                if num_int % a == 0:
+                    return False
+        return True
