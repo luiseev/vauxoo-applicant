@@ -34,6 +34,14 @@ CREATE TABLE employees_hobbies_rel (
     FOREIGN KEY (id_hobby) REFERENCES employee_hobby(id)
 );
 
+CREATE TABLE employees_boss_rel (
+    id_boss INT,
+    id_emp INT,
+    PRIMARY KEY (id_boss, id_emp),
+    FOREIGN KEY (id_boss) REFERENCES employee(id),
+    FOREIGN KEY (id_emp) REFERENCES employee(id)
+);
+
 INSERT INTO employee_department VALUES(1,'Talento Humano','Departamento encargado del control del capital humano de la empresa');
 INSERT INTO employee_department VALUES(2,'Contabilidad y Finanzas', 'Departamento encargado del manejo de las finanzas de la empresa');
 INSERT INTO employee_department VALUES(3, 'Ventas', ' Departamento encargado de las ventas de los productos de la empresa');
@@ -58,4 +66,8 @@ INSERT INTO employees_hobbies_rel VALUES(3,3);
 INSERT INTO employees_hobbies_rel VALUES(3,2);
 INSERT INTO employees_hobbies_rel VALUES(4,1);
 INSERT INTO employees_hobbies_rel VALUES(4,2);
+
+INSERT INTO employees_boss_rel VALUES(1,2);
+INSERT INTO employees_boss_rel VALUES(1,3);
+INSERT INTO employees_boss_rel VALUES(1,4);
 -- ...
