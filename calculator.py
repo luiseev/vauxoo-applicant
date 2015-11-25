@@ -5,12 +5,16 @@ Your module documentation here
 
 class CalculatorClass(object):
     """
-    Your class documentation here
+    Clase que tiene la implementacion del metodo sum 
     """
 
     def sum(self, num_list):
         """
-        Your method documentation here
+        Metodo que realiza la suma de una lista de numeros
         """
         # your sum code here
-        return "not implement yet"  # Remove this dummy line
+        suma = 0
+        for num in num_list
+            suma = suma + num
+
+        return suma
